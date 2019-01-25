@@ -21,7 +21,6 @@ public class PurchaseRequest {
 	private String justification;
 	private Date dateNeeded;
 	private String deliveryMode;
-	private String status;
 	private double total;
 	
 	public PurchaseRequest() {
@@ -29,14 +28,12 @@ public class PurchaseRequest {
 	}
 	
 	public PurchaseRequest(User u, String description, String justification, Date dateNeeded, String deliveryMode,
-			String status, double total, Date submittedDate, String reasonForRejection, boolean isActive,
-			Date dateCreated, Date dateUpdated, int updatedByUser) {
+			double total) {
 		this.user = u;
 		this.description = description;
 		this.justification = justification;
 		this.dateNeeded = dateNeeded;
 		this.deliveryMode = deliveryMode;
-		this.status = status;
 		this.total = total;
 	}
 
@@ -88,14 +85,6 @@ public class PurchaseRequest {
 		this.deliveryMode = deliveryMode;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public double getTotal() {
 		return total;
 	}
@@ -107,7 +96,7 @@ public class PurchaseRequest {
 	@Override
 	public String toString() {
 		return "PurchaseRequest [id=" + id + ", user=" + user + ", description=" + description + ", justification="
-				+ justification + ", dateNeeded=" + dateNeeded + ", deliveryMode=" + deliveryMode + ", status=" + status
-				+ ", total=" + total + "]";
+				+ justification + ", dateNeeded=" + dateNeeded + ", deliveryMode=" + deliveryMode +
+				", total=" + total + "]";
 	}
 }

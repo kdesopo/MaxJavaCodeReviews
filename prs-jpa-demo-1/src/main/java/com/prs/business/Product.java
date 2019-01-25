@@ -26,13 +26,12 @@ public class Product {
 	}
 
 	public Product(Vendor v, String partNumber, String name, double price, 
-			String unit, String photoPath) {
+			String unit) {
 		this.vendor = v;
 		this.partNumber = partNumber;
 		this.name = name;
 		this.price = price;
 		this.unit = unit;
-		this.photoPath = photoPath;
 	}
 
 	public int getId() {

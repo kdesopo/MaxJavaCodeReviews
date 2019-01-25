@@ -8,7 +8,7 @@ import javax.persistence.Query;
 import com.prs.db.DBUtil;
 
 public class PrliDB {
-	public static PurchaseRequestLineItem getPrilById(int prliID) {
+	public static PurchaseRequestLineItem getPrliById(int prliID) {
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		try {
 			PurchaseRequestLineItem prli = em.find(PurchaseRequestLineItem.class, prliID);
